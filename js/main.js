@@ -52,12 +52,13 @@ function updateObstacles() {
     }
 }
 
-// Evento de salto
-window.addEventListener('keydown', (e) => {
-    if (e.code === 'Space' && !isGameOver) {
+// Evento de salto con clic izquierdo
+window.addEventListener('mousedown', (e) => {
+    if (e.button === 0 && !isGameOver) {
         player.jump();
     }
 });
+
 
 function drawScore() {
     ctx.font = '20px Arial';
